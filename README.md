@@ -15,6 +15,19 @@ inbox/        — сирі ідеї, швидкі нотатки
 notes/        — оформлені дослідження, матеріали
 ```
 
+## Як почати
+
+```sh
+git clone https://github.com/poodbooq/book-template.git my-book
+cd my-book
+
+# Видалити історію шаблону, почати свій репозиторій
+rm -rf .git
+git init
+git add -A
+git commit -m "Початок книги"
+```
+
 ## Вимоги
 
 - [zk](https://github.com/zk-org/zk)
