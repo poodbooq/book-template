@@ -1,0 +1,113 @@
+# NOTEBOOK SETTINGS
+[notebook]
+dir = "."
+
+# NOTE SETTINGS
+[note]
+
+language = "uk"
+
+default-title = "Untitled"
+
+filename = "{{slug title}}"
+
+extension = "md"
+
+template = "default.md"
+
+id-charset = "alphanum"
+id-length = 4
+id-case = "lower"
+
+
+# EXTRA VARIABLES
+[extra]
+author = ""
+
+
+# MARKDOWN SETTINGS
+[format.markdown]
+hashtags = true
+colon-tags = true
+wiki-links = true
+
+
+# EXTERNAL TOOLS
+[tool]
+
+editor = "nvim"
+shell = "/bin/bash"
+pager = "less -FIRX"
+
+
+# NAMED FILTERS
+[filter]
+recents = "--sort created- --created-after 'last two weeks'"
+
+
+# COMMAND ALIASES
+[alias]
+
+edlast = "zk edit --limit 1 --sort modified- $@"
+recent = "zk edit --sort created- --created-after 'last two weeks' --interactive"
+lucky = "zk list --quiet --format full --sort random --limit 1"
+timeline = "zk list --format '{{date}}	{{title}}' events --quiet | sort"
+orphans = "zk list --orphan --format '{{title}}'"
+backlinks = "zk list --link-to $@ --format '{{title}} ({{word-count}}w)'"
+by-tag = "zk list --tags $@ --format '{{title}}'"
+
+
+# LSP (EDITOR INTEGRATION)
+[lsp]
+
+[lsp.diagnostics]
+wiki-title = "hint"
+dead-link = "error"
+
+
+# GROUPS
+[group.scenes]
+paths = ["scenes"]
+
+[group.scenes.note]
+template = "scene.md"
+
+[group.chapters]
+paths = ["chapters"]
+
+[group.chapters.note]
+template = "chapter.md"
+
+[group.characters]
+paths = ["characters"]
+
+[group.characters.note]
+template = "character.md"
+
+[group.world]
+paths = ["world"]
+
+[group.world.note]
+template = "location.md"
+
+[group.events]
+paths = ["events"]
+
+[group.events.note]
+template = "event.md"
+
+[group.journal]
+paths = ["journal"]
+
+[group.journal.note]
+filename = "{{format-date now}}"
+template = "journal.md"
+
+[group.inbox]
+paths = ["inbox"]
+
+[group.notes]
+paths = ["notes"]
+
+[group.notes.note]
+template = "note.md"
