@@ -1,7 +1,3 @@
-# NOTEBOOK SETTINGS
-[notebook]
-dir = "."
-
 # NOTE SETTINGS
 [note]
 
@@ -35,7 +31,6 @@ wiki-links = true
 # EXTERNAL TOOLS
 [tool]
 
-editor = "nvim"
 shell = "/bin/bash"
 pager = "less -FIRX"
 
@@ -51,10 +46,10 @@ recents = "--sort created- --created-after 'last two weeks'"
 edlast = "zk edit --limit 1 --sort modified- $@"
 recent = "zk edit --sort created- --created-after 'last two weeks' --interactive"
 lucky = "zk list --quiet --format full --sort random --limit 1"
-timeline = "zk list --format '{{date}}	{{title}}' events --quiet | sort"
+timeline = "python3 scripts/book.py timeline"
 orphans = "zk list --orphan --format '{{title}}'"
 backlinks = "zk list --link-to $@ --format '{{title}} ({{word-count}}w)'"
-by-tag = "zk list --tags $@ --format '{{title}}'"
+by-tag = "zk list --tag $@ --format '{{title}}'"
 
 
 # LSP (EDITOR INTEGRATION)

@@ -1,8 +1,15 @@
 ---
 title: "{{title}}"
-date: {{format-date now}}
+created: {{format-date now}}
+updated: {{format-date now}}
 type: ""
-source: ""
+sources: []
 aliases: []
 tags: []
 ---
+
+## Ключові факти
+
+## Застосування до книги
+
+## Джерела

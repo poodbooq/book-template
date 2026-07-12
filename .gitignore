@@ -1,3 +1,10 @@
 build/
+.zk/notebook.db
 *.pdf
+*.epub
 *.html
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.venv/

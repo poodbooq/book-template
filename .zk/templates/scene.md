@@ -1,11 +1,13 @@
 ---
 title: "{{title}}"
-date: {{format-date now}}
+created: {{format-date now}}
+updated: {{format-date now}}
 status: draft
 word-count: 0
 pov: ""
 setting: ""
-timeline: ""
+story-date: ""
+timeline-order: 0
 act: ""
 tags: []
 ---

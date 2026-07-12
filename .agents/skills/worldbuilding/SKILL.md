@@ -1,6 +1,6 @@
 ---
 name: worldbuilding
-description: Створює та описує елементи вигаданого світу: локації, культури, історичні епохи, магічні системи, релігії, артефакти. Активувати, коли користувач просить створити локацію, описати світ, розробити магічну систему, культуру, історію всесвіту, географію або будь-який елемент світобудови.
+description: "Створює та описує елементи вигаданого світу: локації, культури, історичні епохи, магічні системи, релігії, артефакти. Активувати, коли користувач просить створити локацію, описати світ, розробити магічну систему, культуру, історію всесвіту, географію або будь-який елемент світобудови."
 license: MIT
 compatibility: requires zk
 ---
@@ -25,7 +25,8 @@ compatibility: requires zk
 ```yaml
 ---
 title: "{{title}}"
-date: {{format-date now}}
+created: {{format-date now}}
+updated: {{format-date now}}
 type: ""
 era: ""
 first-appearance: ""
@@ -42,9 +43,10 @@ tags: [location]
 ```yaml
 ---
 title: "{{title}}"
-date: {{format-date now}}
+created: {{format-date now}}
+updated: {{format-date now}}
 type: worldbuilding
-source: ""
+sources: []
 aliases: []
 tags: []
 ---
@@ -148,7 +150,8 @@ Frontmatter: `type`, `era`, `first-appearance`
    ```yaml
    ---
    title: "Темний ліс"
-   date: 2026-07-12
+   created: 2026-07-12
+   updated: 2026-07-12
    type: natural
    era: ""
    first-appearance: "[[ch02-sc03]]"
@@ -170,9 +173,10 @@ Frontmatter: `type`, `era`, `first-appearance`
    ```yaml
    ---
    title: "Магічна система: Місячний цикл"
-   date: 2026-07-12
+   created: 2026-07-12
+   updated: 2026-07-12
    type: worldbuilding
-   source: ""
+   sources: []
    aliases: [місячна магія, фази місяця]
    tags: [magic, worldbuilding]
    ---

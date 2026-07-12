@@ -1,6 +1,6 @@
 ---
 name: character
-description: Створює, описує та розвиває персонажів художньої книги. Активувати, коли користувач просить створити нового персонажа, описати зовнішність, характер чи історію, додати мотивацію, конфлікт або арку персонажа, оновити роль чи відносини між персонажами.
+description: "Створює, описує та розвиває персонажів художньої книги. Активувати, коли користувач просить створити нового персонажа, описати зовнішність, характер чи історію, додати мотивацію, конфлікт або арку персонажа, оновити роль чи відносини між персонажами."
 license: MIT
 compatibility: requires zk
 ---
@@ -24,7 +24,8 @@ compatibility: requires zk
 ```yaml
 ---
 title: "{{title}}"
-date: {{format-date now}}
+created: {{format-date now}}
+updated: {{format-date now}}
 role: ""
 arc: ""
 motivation: ""
@@ -35,7 +36,7 @@ tags: [character]
 ```
 
 - `role` — тільки одне з: `protagonist`, `antagonist`, `supporting`
-- `arc` — тип арки (redemption, fall, growth, flat, corruption)
+- `arc` — тип арки (наприклад: redemption, fall, growth, flat, corruption, mentor); список розширюваний, але значення має бути послідовним у проєкті
 - `motivation` — що рухає персонажем (внутрішнє бажання)
 - `conflict` — внутрішній конфлікт (чого персонаж хоче vs чого потребує)
 - `aliases` — альтернативні імена, прізвиська для пошуку
@@ -129,7 +130,8 @@ just search "ім'я"       # пошук згадок персонажа по в
    ```yaml
    ---
    title: "Мирон"
-   date: 2026-07-12
+   created: 2026-07-12
+   updated: 2026-07-12
    role: supporting
    arc: mentor
    motivation: "Захистити світ від повторення [[the-ritual]]"

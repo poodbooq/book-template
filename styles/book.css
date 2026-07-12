@@ -1,0 +1,39 @@
+@page {
+  size: A5;
+  margin: 20mm 18mm 22mm;
+}
+
+:root {
+  color: #1f1f1f;
+  background: #fff;
+  font-family: "Noto Serif", "DejaVu Serif", serif;
+  line-height: 1.55;
+}
+
+body {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+h1 {
+  break-before: page;
+  margin-top: 0;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  text-indent: 1.5em;
+  orphans: 3;
+  widows: 3;
+}
+
+h1 + p,
+hr + p,
+blockquote p {
+  text-indent: 0;
+}
+
+nav#TOC {
+  break-after: page;
+}

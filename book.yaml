@@ -1,0 +1,7 @@
+title: "Назва книги"
+schema-version: 1
+author: ""
+lang: uk-UA
+rights: ""
+toc: true
+pdf-engine: weasyprint
