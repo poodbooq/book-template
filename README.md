@@ -28,14 +28,26 @@ styles/       CSS для HTML, EPUB і PDF
 
 ## Створення книги з шаблону
 
-Найпростіше — натиснути **Use this template** на GitHub. Через `gh`:
+Можна натиснути **Use this template** на GitHub. Якщо `gh` уже авторизований, найкоротший варіант у Bash або Zsh:
 
 ```bash
-gh repo create my-book \
+set -o pipefail; curl -fsSL https://raw.githubusercontent.com/poodbooq/book-template/master/scripts/create-book.sh | bash -s -- my-book
+```
+
+`my-book` передається скрипту аргументом: `echo "my-book" | curl ... | bash` не спрацює, бо стандартний ввід `bash` зайнятий кодом скрипта. Скрипт перевіряє `gh` і його авторизацію, створює приватний репозиторій із цього шаблону та клонує його.
+
+`curl | bash` виконує актуальний скрипт із `master`; запускай його, лише якщо довіряєш репозиторію. Для повного контролю завантаж скрипт, переглянь його й запусти локально.
+
+Той самий процес вручну через `gh`:
+
+```bash
+export BOOK="my-book"
+
+gh repo create "$BOOK" \
   --private \
   --template poodbooq/book-template \
   --clone
-cd my-book
+cd "$BOOK"
 ```
 
 Так зберігається чиста історія нового репозиторію без ручного видалення `.git`.
