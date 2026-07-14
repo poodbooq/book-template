@@ -13,6 +13,7 @@ events/       події світу книги
 notes/        research, worldbuilding, референси та ідеї
 journal/      щоденник роботи
 inbox/        сирі нотатки
+templates/    нативні шаблони Obsidian
 assets/       обкладинка та інші ресурси
 styles/       CSS для HTML, EPUB і PDF
 ```
@@ -204,6 +205,18 @@ just build-pdf
 - написання сцен.
 
 Скіли підпорядковуються структурі й схемі цього репозиторію. Сам шаблон повністю придатний до ручної роботи без AI.
+
+## Obsidian
+
+Корінь репозиторію можна відкрити в Obsidian як vault. Папка шаблонів уже задана в `.obsidian/templates.json`; community plugins не потрібні.
+
+Під час першого відкриття увімкни **Settings → Core plugins → Templates**. Далі:
+
+1. Створи порожню нотатку в потрібній директорії (`scenes/`, `chapters/`, `characters/`, `world/`, `events/`, `notes/`, `journal/` або `inbox/`).
+2. Виконай **Templates: Insert template** через Command palette.
+3. Обери відповідний шаблон: `scene`, `chapter`, `character`, `location`, `event`, `note`, `journal` або `inbox`.
+
+Нативні змінні Obsidian автоматично підставлять назву файла й поточну дату. Ці шаблони повторюють схему `.zk/templates/`, тому нотатки, створені через Obsidian і `zk`, сумісні між собою.
 
 ## Платформи та редактор
 
